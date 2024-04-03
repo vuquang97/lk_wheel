@@ -188,3 +188,8 @@ export const showResult = (data) => {
     MySwal.fire("Đã trúng giải", data, "success");
   }
 };
+
+export const showMess = (text, type) => {
+  //type =error, success
+  MySwal.fire(text, "", type);
+};

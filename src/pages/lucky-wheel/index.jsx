@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { apiGetPrizes } from "../../apis";
+import { apiGetPrizes, apiUpdateAccount } from "../../apis";
 import { wheelConfig } from "./constants";
 import "./style.css";
 import { draw, getCssInfo, randomIndex, showResult } from "./utils";
@@ -94,6 +94,10 @@ const LuckyWheel = () => {
     setIsStart(true);
 
     setTimeout(() => {
+      apiUpdateAccount(accLogin.id, {
+        ...accLogin,
+        prize: prizes[optsPrize.prizeId].text,
+      });
       handleShowResult(optsPrize);
       setIsStart(false);
     }, 6000);
@@ -138,7 +142,7 @@ const LuckyWheel = () => {
               navigate("/settings");
             }}
           >
-            Quay
+            setting
           </Button>
         </Box>
       )}

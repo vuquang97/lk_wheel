@@ -1,0 +1,10 @@
+.bg {
+  background-image: url('../../assets/images/bg.PNG');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}

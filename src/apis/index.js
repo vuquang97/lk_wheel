@@ -11,6 +11,13 @@ export const apiCreateAccount = (body) => {
   );
 };
 
+export const apiUpdateAccount = (id, body) => {
+  return axios.put(
+    `https://660d77176ddfa2943b347d0f.mockapi.io/accounts/${id}`,
+    body
+  );
+};
+
 export const apiGetPrizes = () => {
   return axios.get("https://660d77176ddfa2943b347d0f.mockapi.io/prizes");
 };
